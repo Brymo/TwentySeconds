@@ -1,4 +1,12 @@
-.stylish{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 2em;
+body{
+    width: 100%;
+    height: 100%;
 }
+
+#mainframe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+

@@ -1,0 +1,26 @@
+{
+  "name": "twentyseconds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brymo/TwentySeconds.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brymo/TwentySeconds/issues"
+  },
+  "homepage": "https://github.com/Brymo/TwentySeconds#readme",
+  "dependencies": {
+    "@octokit/rest": "^16.28.9",
+    "browserify": "^16.5.0",
+    "octokit": "^1.0.0-hello-world",
+    "repeat-string": "^1.6.1",
+    "watchify": "^3.11.1"
+  }
+}
