@@ -10,38 +10,36 @@ grabFile =  async (user) => {
     })
     const content = await Buffer.from(stuff.data.content,'Base64').toString();
     console.log(content);
-    return "YO YO";
+    return content;
 }
 
 
-/*const p = new Promise((resolve,reject) => {
-    const text = grabFile()
-    resolve(text);
-});*/
-
 const axios = require('axios');
-axios.get('https://api.github.com/repos/Brymo/TwentySeconds/git/trees/master')
+axios.get('https://www.plainlaundry.com')
 .then((result) => {
-    
-    const objects = result.data.tree;
-    const sha = objects.filter( (item) => item.path === "Posts");
-    
-    return sha[0].sha;
+    const data = result.data.wishers;
+    const wishers = Object.keys(data);
 
-}).then((result) => {
-    return axios.get(`https://api.github.com/repos/Brymo/TwentySeconds/git/trees/${result}`)
+    const wisherData = wishers.map((name) => {
+        return {name: name, wish: data[name]}
+    })
+    
+    decoratePage(wisherData);
+
 })
-.then(
-    (result) => {
-        const treeData = result.data.tree;
-        const enterers = treeData.map((item) => item.path);
 
-        enterers.forEach((enterer) => {
-            grabFile(enterer);
-        });
-    }
-)
 
+function decoratePage(wisherData){
+
+    wisherData.forEach(element => {
+        
+        const main = document.getElementById("mainframe");
+        const newElem = document.createElement('div');
+        newElem.innerHTML = element.name +": "+ element.wish;
+        main.appendChild(newElem);
+    });
+
+}
 }).call(this,require("buffer").Buffer)
 },{"@octokit/rest":7,"axios":36,"buffer":126}],2:[function(require,module,exports){
 'use strict';
