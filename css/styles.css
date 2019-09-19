@@ -5,6 +5,7 @@ body {
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
+    background-image: url("../ouw.jpg");
 }
 
 html{
@@ -21,6 +22,7 @@ html{
     display: grid;
     grid-template-columns: 40% 1fr;
     grid-template-rows: 1fr;
+    background-color: gold;
 }
 
 #top-img{
