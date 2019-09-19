@@ -36,21 +36,23 @@ function getRequests(){
             newText.innerHTML = element.wish +" - "+element.name;
 
             const newImg = document.createElement("img");
-
+            const imgwrap = document.createElement("div");
+            imgwrap.className = "imgwrapper";
+            imgwrap.appendChild(newImg);
             newImg.src =  cdnURL+((imgCount++ % maxImages)+1);
 
             if(lrtoggle){
                 newText.className = "msgtxtl";
                 newImg.className = "msgimgr";
                 newMessage.className = "messageframel";
-                newMessage.appendChild(newImg);
+                newMessage.appendChild(imgwrap);
                 newMessage.appendChild(newText);
             }else{
                 newText.className = "msgtxtr";
                 newImg.className = "msgimgl";
                 newMessage.className = "messageframer";
                 newMessage.appendChild(newText);
-                newMessage.appendChild(newImg);
+                newMessage.appendChild(imgwrap);
             }
             lrtoggle = !lrtoggle;
 
