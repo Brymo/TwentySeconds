@@ -1,16 +1,89 @@
-body{
+body {
+    width: 99%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+html{
     width: 100%;
-    height: 100%;
+    box-sizing: border-box;
+    height: auto;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 #mainframe{
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: 1fr 10%;
+}
+
+#top-img{
+    grid-column: 1/span 1;
+    grid-row: 1/span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100%;
+
+}
+
+#scroll-down-label{
+    grid-column: 1/span 2;
+    grid-row: 2/span 1;
+    border-top-style: solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-family: "Coolvetica";
+    border-width: 0.1em;
+    border-top-color: lightgray;
+
+}
+
+.img{
+    width:80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 0.2em;
+    box-shadow: 0em 0.2em 0.2em 0.2em gray;
+}
+
+
+
+.top-text{
+    grid-column: 2/span 1;
+    grid-row: 1/span 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
-    justify-content: flex-start;
-    font-family: "Coolvetica";
-    font-size: 3em;
+    width:95%;
+    height:100%;
 }
+
+.flex-left{
+    align-items: flex-start;
+}
+
+.big-text{
+    font-size: 4em;
+    font-family: "Coolvetica";
+}
+
+.little-text{
+    font-size: 2em;
+    font-family: "Coolvetica"
+}
+
+
 
 @font-face {
     font-family: 'Coolvetica';
@@ -19,5 +92,82 @@ body{
     font-style: normal;
 }
 
+.messageframer{
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: 1fr;
+    width:90%;
+    box-sizing: content-box;
+    display:grid;
+    font-family: "Coolvetica";
+}
 
+.messageframel{
+    grid-template-columns: 1fr 30%;
+    grid-template-rows: 1fr;
+    width:90%;
+    min-height: 20em;
+    box-sizing: content-box;
+    display:grid;
+    font-family: "Coolvetica";
+}
 
+.msgtxtr{
+    grid-column: 2/span 1;
+    grid-row: 1/span 1;
+    font-family: "Coolvetica";
+    font-size: 2em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    grid-row: 1/span 1;
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+.msgtxtl{
+    grid-column: 1/span 1;
+    grid-row: 1/span 1;
+    font-family: "Coolvetica";
+    font-size: 2em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    grid-row: 1/span 1;
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+.msgimgr{
+    max-width:100%;
+    object-fit: cover;
+    grid-column: 2/span 1;
+    grid-row: 1/span 1;
+    border-radius: 1em;
+    transition: box-shadow 1s;
+    box-shadow: 0.2em 0.2em 0.2em grey;
+}
+
+.msgimgr:hover{
+    box-shadow: 0.5em 0.5em 0.5em grey;
+}
+.msgimgl:hover{
+    box-shadow: -0.5em 0.5em 0.5em grey;
+}
+.msgimgl{
+    max-width:100%;
+    object-fit: cover;
+    grid-column: 1/span 1;
+    grid-row: 1/span 1;
+    border-radius: 1em;
+    transition: box-shadow 1s;
+    box-shadow: -0.2em 0.2em 0.2em grey;
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+}
