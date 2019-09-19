@@ -42,7 +42,7 @@ html{
     height: 80%;
     object-fit: cover;
     border-radius: 0.2em;
-    box-shadow: 0em 0.2em 0.2em 0.2em gray;
+    box-shadow: 0em 0.2em 0.2em 0.2em #555555;
 }
 
 
