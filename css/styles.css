@@ -50,6 +50,10 @@ html{
     box-shadow: 0em 0.2em 0.2em 0.2em #555555;
 }
 
+.botimg{
+    margin: 5vh 0vh ;
+    height: 90vh;
+}
 
 
 .top-text{
@@ -211,7 +215,6 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 2em;
     width: 100vw;
     max-width: 100%;
 }
