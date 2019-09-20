@@ -73,7 +73,6 @@ function getRandomInt(max) {
   }
 
 const mainframe = document.getElementById("mainframe");
-mainframe.style.height = window.innerHeight + "px";
 getRequests();
 }).call(this,require("buffer").Buffer)
 },{"@octokit/rest":7,"axios":36,"buffer":126}],2:[function(require,module,exports){

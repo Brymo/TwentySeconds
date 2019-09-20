@@ -71,5 +71,4 @@ function getRandomInt(max) {
   }
 
 const mainframe = document.getElementById("mainframe");
-mainframe.style.height = window.innerHeight + "px";
 getRequests();
