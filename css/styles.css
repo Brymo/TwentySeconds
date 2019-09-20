@@ -6,6 +6,7 @@ body {
     align-items: center;
     box-sizing: border-box;
     background-image: url("../ouw.jpg");
+	margin-top: 0;
 }
 
 html{
