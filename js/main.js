@@ -18,15 +18,13 @@ function getRequests(){
     .then((result) => {
         const data = result.data.wishers;
         const wishers = Object.keys(data);
-
         const wisherData = wishers.map((name) => {
-            return {name: name, wish: data[name]}
+            return {name: name, wish: data[name].message, hasPic:data[name]["hasPic"]}
         })
         
-        const maxImages = 10;
-        const cdnURL = "https://d3ccubkld17jql.cloudfront.net/"
+
+        const cdnURL = "https://www.plainlaundry.com/pics/"
         let lrtoggle = true;
-        let imgCount = 0;
         wisherData.forEach(element => {
         
             const main = document.querySelector("#root");
@@ -35,27 +33,32 @@ function getRequests(){
 
             newText.innerHTML = element.wish +" - "+element.name;
 
-            const newImg = document.createElement("img");
-            const imgwrap = document.createElement("div");
-            imgwrap.className = "imgwrapper";
-            imgwrap.appendChild(newImg);
-            newImg.src =  cdnURL+((imgCount++ % maxImages)+1);
+            if(element.hasPic){
+                const newImg = document.createElement("img");
+                const imgwrap = document.createElement("div");
+                imgwrap.className = "imgwrapper";
+                imgwrap.appendChild(newImg);
+                newImg.src =  cdnURL+element.name;
 
-            if(lrtoggle){
-                newText.className = "msgtxtl";
-                newImg.className = "msgimgr";
-                newMessage.className = "messageframel";
-                newMessage.appendChild(imgwrap);
-                newMessage.appendChild(newText);
+                if(lrtoggle){
+                    newText.className = "msgtxtl";
+                    newImg.className = "msgimgr";
+                    newMessage.className = "messageframel";
+                    newMessage.appendChild(imgwrap);
+                    newMessage.appendChild(newText);
+                }else{
+                    newText.className = "msgtxtr";
+                    newImg.className = "msgimgl";
+                    newMessage.className = "messageframer";
+                    newMessage.appendChild(newText);
+                    newMessage.appendChild(imgwrap);
+                }
+                lrtoggle = !lrtoggle;
             }else{
-                newText.className = "msgtxtr";
-                newImg.className = "msgimgl";
-                newMessage.className = "messageframer";
+                newText.className = "msgtxt";
+                newMessage.className = "messageframe";
                 newMessage.appendChild(newText);
-                newMessage.appendChild(imgwrap);
             }
-            lrtoggle = !lrtoggle;
-
             //newElem.innerHTML = element.name +": "+ element.wish;
             main.appendChild(newMessage);
         });

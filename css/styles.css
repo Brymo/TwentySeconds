@@ -108,6 +108,20 @@ html{
     box-shadow: 0em 0em 1em #111111;
 }
 
+.messageframe{
+    width:100%;
+    min-height: 20em;
+    box-sizing: content-box;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Coolvetica";
+    background-color: #282828;
+    color: #ffffff;
+    z-index: -1;
+    box-shadow: 0em 0em 1em #111111;
+}
+
 .msgtxtr{
     grid-column: 2/span 1;
     grid-row: 1/span 1;
@@ -120,6 +134,13 @@ html{
     grid-row: 1/span 1;
     padding: 2em;
     box-sizing: border-box;
+}
+
+.msgtxt{
+    font-family: "Coolvetica";
+    font-size: 2em;
+    box-sizing: border-box;
+    padding:2em;
 }
 
 .msgtxtl{
