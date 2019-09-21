@@ -35,7 +35,7 @@ function getRequests(){
             const newMessage = document.createElement('div');
             const newText = document.createElement("div");
 
-            newText.innerHTML = element.wish +" - "+element.name;
+            newText.innerHTML = element.wish;
             const colors = ["#D4C685","#FFD700","#FFA630","#D7E8BA","#4DA1A9"];
 
             if(element.hasPic){
