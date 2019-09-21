@@ -95,6 +95,8 @@ html{
     grid-template-rows: 1fr;
     width:100vw;
     max-width: 100%;
+    min-height: 20em;
+    max-height: 90vh;
     box-sizing: content-box;
     display:grid;
     font-family: "Coolvetica";
@@ -110,6 +112,7 @@ html{
     width:100vw;
     max-width: 100%;
     min-height: 20em;
+    max-height: 90vh;
     box-sizing: content-box;
     display:grid;
     font-family: "Coolvetica";
@@ -124,6 +127,7 @@ html{
     width:100vw;
     max-width: 100%;
     min-height: 20em;
+    max-height: 90vh;
     box-sizing: content-box;
     display:flex;
     justify-content: center;
