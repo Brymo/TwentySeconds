@@ -71,7 +71,6 @@ function getRequests(){
             const wishLabel = document.createElement("div");
             wishLabel.className = "label";
             wishLabel.innerHTML = element.name;
-            wishLabel.style.backgroundColor = bgcol;
             wishLabel.style.color = LightenDarkenColor(bgcol, 100);
 
             newMessage.appendChild(wishLabel);
