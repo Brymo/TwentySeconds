@@ -27,6 +27,8 @@ function getRequests(){
 
         const cdnURL = "https://www.plainlaundry.com/pics/"
         let lrtoggle = true;
+
+        let count = 0;
         wisherData.forEach(element => {
         
             const main = document.querySelector("#root");
@@ -34,10 +36,12 @@ function getRequests(){
             const newText = document.createElement("div");
 
             newText.innerHTML = element.wish +" - "+element.name;
+            const colors = ["#D4C685","#FFD700","#FFA630","#D7E8BA","#4DA1A9"];
 
             if(element.hasPic){
                 const newImg = document.createElement("img");
                 const imgwrap = document.createElement("div");
+
                 imgwrap.className = "imgwrapper";
                 imgwrap.appendChild(newImg);
                 newImg.src =  cdnURL+element.name;
@@ -61,11 +65,45 @@ function getRequests(){
                 newMessage.className = "messageframe";
                 newMessage.appendChild(newText);
             }
+            const bgcol = colors[++count % colors.length];
+            newMessage.style.backgroundColor = bgcol;
+            newMessage.style.color = LightenDarkenColor(bgcol, -200);
+
             //newElem.innerHTML = element.name +": "+ element.wish;
             main.appendChild(newMessage);
         });
 
     })
+}
+
+function LightenDarkenColor(col, amt) {
+  
+    var usePound = false;
+  
+    if (col[0] == "#") {
+        col = col.slice(1);
+        usePound = true;
+    }
+ 
+    var num = parseInt(col,16);
+ 
+    var r = (num >> 16) + amt;
+ 
+    if (r > 255) r = 255;
+    else if  (r < 0) r = 0;
+ 
+    var b = ((num >> 8) & 0x00FF) + amt;
+ 
+    if (b > 255) b = 255;
+    else if  (b < 0) b = 0;
+ 
+    var g = (num & 0x0000FF) + amt;
+ 
+    if (g > 255) g = 255;
+    else if (g < 0) g = 0;
+ 
+    return (usePound?"#":"") + (g | (b << 8) | (r << 16)).toString(16);
+  
 }
 
 function getRandomInt(max) {
