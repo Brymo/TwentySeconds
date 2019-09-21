@@ -23,7 +23,7 @@ html{
     display: grid;
     grid-template-columns: 40% 1fr;
     grid-template-rows: 1fr;
-    background-color: #ffffff;
+    background-image:URL("../hbd.png");
     width: 100vw;
     height: 100vh;
     max-width: 100%;
