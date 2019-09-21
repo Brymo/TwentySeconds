@@ -34,7 +34,7 @@ function getRequests(){
             const newText = document.createElement("div");
 
             if(element.wish.length > 1000){
-                newText.style.fontSize = "2em";
+                newText.style.fontSize = "1.5em";
             }
 
             newText.innerHTML = element.wish;
