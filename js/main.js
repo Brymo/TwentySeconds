@@ -33,6 +33,10 @@ function getRequests(){
             const newMessage = document.createElement('div');
             const newText = document.createElement("div");
 
+            if(element.wish.length > 1000){
+                newText.style.fontSize = "2em";
+            }
+
             newText.innerHTML = element.wish;
             const colors = ["#D4C685","#FFD700","#FFA630","#D7E8BA","#4DA1A9"];
 
