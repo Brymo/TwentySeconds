@@ -99,9 +99,10 @@ html{
     box-sizing: content-box;
     display:grid;
     font-family: "Coolvetica";
-    background-color: #fefefefe;
     color: #222222;
     overflow: auto;
+    position: sticky;
+    top:0;
 }
 
 .messageframel{
@@ -113,10 +114,10 @@ html{
     box-sizing: content-box;
     display:grid;
     font-family: "Coolvetica";
-    background-color: #fefefefe;
     color: #222222;
-    z-index: -1;
     overflow: auto;
+    position: sticky;
+    top:0;
 }
 
 .messageframe{
@@ -129,8 +130,9 @@ html{
     align-items: center;
     font-family: "Coolvetica";
     color: #222222;
-    z-index: -1;
     overflow: auto;
+    position: sticky;
+    top:0;
 }
 
 .msgtxtr{
@@ -202,6 +204,17 @@ html{
     justify-content: center;
     align-items: center;
     width:100%;
+}
+
+.label{
+    position: absolute;
+    top:0;
+    width: 100%;
+    font-size: 2em;
+    padding: 1em;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
 }
 
 #root{
