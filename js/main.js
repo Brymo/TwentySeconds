@@ -35,6 +35,8 @@ function getRequests(){
 
             if(element.wish.length > 1000){
                 newText.style.fontSize = "1.5em";
+            }else if(element.wish.length <= 100){
+                newText.style.fontSize = "5em";
             }
 
             newText.innerHTML = element.wish;
